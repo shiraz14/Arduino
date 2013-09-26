@@ -6,7 +6,7 @@ Strobing 3-LED with dimming.
 int led1 = 9;           
 int led2 = 10;
 int led3 = 11;
-int brightness = 255;    
+int brightness1 = 255;    
 int brightness2 = 255;    
 int brightness3 = 255;    
 int fadeAmount = 5;    // how many points to fade the LED by
@@ -14,20 +14,20 @@ int fadeAmount = 5;    // how many points to fade the LED by
 // running the setup routine when you press reset:
 void setup()  { 
   // declare pins 9, 10 & 11 to be an output:
-  pinMode(led, OUTPUT);
+  pinMode(led1, OUTPUT);
   pinMode(led2, OUTPUT);
   pinMode(led3, OUTPUT);
 } 
 
-// the step-down loop routine for led:
+// the step-down loop routine for led1:
 void loop()  { 
   // set the brightness of pin 9:
-  analogWrite(led1, brightness);    // setting led1 to max brightness
+  analogWrite(led1, brightness1);    // setting led1 to max brightness
 
   // reduce the brightness for next time through the loop:
-  brightness = brightness - fadeAmount;
+  brightness1 = brightness1 - fadeAmount;
 
-if (brightness == 0) {
+if (brightness1 == 0) {
 // the step-down loop routine for led2:
 void loop()  { 
   // set the brightness of pin 10:
